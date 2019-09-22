@@ -1,0 +1,42 @@
+
+body{
+
+
+
+
+}
+
+
+
+
+
+
+.header {
+    height: 15vh;
+
+    background-color: #FE955B;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-bottom: 1rem solid black;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+
+.header__text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+     transform: translate(-50%, -50%); 
+    text-align: center;
+}
+
+
+
+p{
+
+    font-size: 20px;
+
+
+}
