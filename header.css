@@ -1,0 +1,75 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: 'Be Vietnam', sans-serif;
+}
+
+/* HEADER */
+
+.header {
+    height: 50vh;
+    width: 1140px;
+    background-image: url(sample_header.jpg);
+    background-position: bottom;
+    background-size: cover;
+    position: relative;
+}
+
+/* NAVBAR */
+
+.navbar {
+    width: 1140px;
+    overflow: hidden;
+    z-index:100;
+    text-align: center;
+    
+    background-image: linear-gradient(to right,#FE955B 30%, #6d366F 70%);
+}
+
+.navbar a:link {
+    display: inline-block;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: inline-block;
+  }
+
+  .navbar a {
+    color: #fff;
+  }
+
+  .navbar a:hover {
+    color: #FECE8C;
+  }
+
+  .content {
+    padding: 16px;
+  }
+  
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  .sticky + .content {
+    padding-top: 60px;
+  }
+
+  .navbar__logobox {
+    font-family: 'Oleo Script Swash Caps', cursive;
+    float: left;
+    margin-left: 30px;
+    font-size: 25px;
+    color: white;
+    padding: 14px 16px;
+  }
+
+  .navbar__link {
+    float: right;
+  }
