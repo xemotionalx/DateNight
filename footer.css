@@ -1,0 +1,72 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: 'Be Vietnam', sans-serif;
+}
+
+/* TYPOGRAPHY */
+.logo {
+    font-size: 25px;
+    font-family: 'Oleo Script Swash Caps', cursive;
+}
+
+/* FOOTER */
+.footer {
+    background-color: #4F2E65;
+    padding: 10px 100px;
+    font-size: 14px;
+    color: #f7f7f7;
+    width: 1140px;
+}
+
+
+ .footer__logobox {
+        text-align: center;
+        margin-bottom: 10px;
+        color: #FECE8C;
+        font-size: 20px;
+    }
+
+    .footer__navigation {
+        border-top: 1px solid #FECE8C;
+        padding-top: 20px;
+        display: inline-block;
+    }
+
+    .footer__list {
+        list-style: none;
+    }
+
+    .footer__item {
+        display: inline-block;
+    }
+
+    .footer__item:not(:last-child) {
+        margin-right: 15px;
+    }
+
+    .footer a:link,
+    .footer a:visited {
+        color: #f7f7f7;
+        text-decoration: none;
+        text-transform: uppercase;
+        display: inline-block;
+        }
+
+    .footer a:hover,
+    .footer a:active {
+         color: #FECE8C;
+    }
+
+    .footer__copyright {
+        border-top: 1px solid #FECE8C;
+        padding-top: 10px;
+        width: 70%;
+        float: right;
+    }
+    
