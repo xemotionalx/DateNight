@@ -1,0 +1,21 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: 'Be Vietnam', sans-serif;
+}
+
+/* TYPOGRAPHY */
+.logo {
+    font-size: 25px;
+    font-family: 'Oleo Script Swash Caps', cursive;
+}
+
+/* MAIN CONTENT */
+.content {
+    background-color: #f7f7f7;
+}
