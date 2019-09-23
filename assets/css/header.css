@@ -1,20 +1,8 @@
-* {
-    margin: 0 auto;
-    padding: 0;
-    box-sizing: inherit;
-}
-
-body {
-    box-sizing: border-box;
-    font-family: 'Be Vietnam', sans-serif;
-}
-
 /* HEADER */
 
 .header {
     height: 50vh;
-    width: 1140px;
-    background-image: url(sample_header.jpg);
+    background-image: url(../images/headers/sample_header.jpg);
     background-position: bottom;
     background-size: cover;
     position: relative;
@@ -23,7 +11,6 @@ body {
 /* NAVBAR */
 
 .navbar {
-    width: 1140px;
     overflow: hidden;
     z-index:100;
     text-align: center;
