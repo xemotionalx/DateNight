@@ -1,0 +1,19 @@
+.profile-box {
+    background-color: #777;
+     padding: 5rem 0;
+     text-align: center;
+ }
+
+ .profile__img {
+     height: 50rem;
+     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, .2);
+    border-radius: 3px;
+ }
+
+ .profile__text {
+    height: 50rem;
+     background-color:white;
+     padding: 5rem;
+     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, .2);
+    border-radius: 3px;
+ }
