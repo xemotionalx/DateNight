@@ -20,3 +20,14 @@ body {
     background-color: #f7f7f7;
     min-height: 100vh;
 }
+
+.section-heading {
+    background: linear-gradient(329deg,#6d366f, #fe955b, #fece8c);
+    margin-top: 20px;
+    font-family: 'Oleo Script Swash Caps', cursive;
+    color: #fff;
+    font-size: 25px;
+    padding: 10px 20px;
+    border-radius: 3px;
+    text-align: center;
+}

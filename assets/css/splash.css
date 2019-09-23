@@ -1,0 +1,85 @@
+.section-splash {
+    height: 100vh;
+    background-color: #fff;
+    background-image: url(../images/splash_bg.jpg);
+    background-size: cover;
+    background-position: top right;
+    background-attachment: fixed;
+}
+
+.section-splash__text-box {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+.section-splash__heading-primary {
+    text-align: center;
+    padding: 10rem;
+ }
+
+ .heading-primary--main {
+    font-family: 'Oleo Script Swash Caps', cursive;
+    font-size: 100px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 8px #FECE8C, 0 0 10px #6d366F;
+    color: #fff;
+ }
+
+ .heading-primary--sub {
+    font-size: 25px;
+    margin-bottom: 30px;
+    margin-top: 0;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-shadow: 0 0 3px #4F2E65, 0 0 5px #6d366F;
+    color: #fff;
+ }
+
+ .heading-primary-sub-2 {
+    font-size: 15px;
+    color: #fff;
+ }
+
+ /* BUTTONS */
+
+ .btn-splash {
+    background: linear-gradient(329deg, #fece8c, #fe955b);
+     margin: 30px;
+ }
+
+ .btn-splash a:link,
+ .btn-splash a:visited {
+     color: #222;
+     font-size: 18px;
+     padding: 5px;
+
+ }
+
+ .btn-splash:hover,
+ .btn-splash:active {
+    background: linear-gradient(329deg, #fece8c, #fe955b, #6d366f);
+    background-size: 300% 300%;
+    animation: btn-splash-animate 5s ease infinite;
+
+ }
+
+ .btn-splash:active {
+    transform: translateY(2px);
+ }
+
+ a:hover,
+ a:active {
+    color: #FECE8C;
+ }
+
+
+
+ /* BUTTON GRADIENT ANIMATIONS */
+ 
+@keyframes btn-splash-animate {
+    0%{background-position:0% 100%}
+    50%{background-position:100% 50%}
+    100%{background-position:100% 0%}
+}
