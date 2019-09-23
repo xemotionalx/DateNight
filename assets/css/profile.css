@@ -1,19 +1,37 @@
 .profile-box {
-    background-color: #777;
-     padding: 5rem 0;
+    background-image: url(../images/profile/adventurous-bg.jpeg);
+     padding: 10px 0;
      text-align: center;
+     border-radius: 4px;
+     height: 520px;
+     position: relative;
  }
 
  .profile__img {
-     height: 50rem;
+     height: 500px;
      box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, .2);
     border-radius: 3px;
  }
 
  .profile__text {
-    height: 50rem;
-     background-color:white;
-     padding: 5rem;
-     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, .2);
+     font-size: 18px;
+    height: 500px;;
+     padding: 100px;
+     box-shadow: 0 15px 40px rgba(0, 0, 0, .2);
     border-radius: 3px;
+ }
+
+ .profile__title {
+    font-family: 'Oleo Script Swash Caps', cursive;
+    color: white;
+    font-size: 70px;
+    position: absolute;
+    top: 5px;
+    right: 50px;
+ }
+
+ /* FAVORITES SECTION */
+ .favs-title {
+     font-size: 25px;
+     color: #4F2E65;
  }
