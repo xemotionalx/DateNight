@@ -1,7 +1,7 @@
 .section-splash {
     height: 100vh;
     background-color: #fff;
-    background-image: url(../images/splash_bg.jpg);
+    background-image: url(../images/splash-bg-alt.jpg);
     background-size: cover;
     background-position: top right;
     background-attachment: fixed;
@@ -45,21 +45,21 @@
  /* BUTTONS */
 
  .btn-splash {
-    background: linear-gradient(329deg, #fece8c, #fe955b);
+    background: linear-gradient(329deg, #fece8c, #fe5651, #6d366f);
      margin: 30px;
  }
 
  .btn-splash a:link,
  .btn-splash a:visited {
      color: #222;
-     font-size: 18px;
+     font-size: 14px;
      padding: 5px;
 
  }
 
  .btn-splash:hover,
  .btn-splash:active {
-    background: linear-gradient(329deg, #fece8c, #fe955b, #6d366f);
+    background: linear-gradient(329deg, #6d366f, #fe5651, #fece8c);
     background-size: 300% 300%;
     animation: btn-splash-animate 5s ease infinite;
 
