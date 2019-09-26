@@ -9,20 +9,14 @@ var queryURL = "https://www.eventbriteapi.com/v3/events/search//?categories=103&
     }).then(function(response) {
 
         $("#events-div").empty();
-        
-        console.log(response.events[0].name);
-        console.log(response.events[0].description);
-        console.log("img: " + response.events[0].logo.original.url);
-        console.log(response.events[0].url);
-        console.log(response.events[0]);
 
-        for (i = 0; i < 3; i++) {
+        for (i = 0; i < 9; i++) {
             
             var cardWidth = $("<div>");
             cardWidth.addClass("col s12 m4");
 
             var card = $("<div>");
-            card.addClass("card");
+            card.addClass("card small");
 
             var cardImgDiv = $("<div>");
             cardImgDiv.addClass("card-image waves-effect waves-block waves-light");
@@ -43,8 +37,25 @@ var queryURL = "https://www.eventbriteapi.com/v3/events/search//?categories=103&
             cardIcon.text("more_vert");
 
             var cardLink = $("<p>");
-            cardLink.html("")
+            cardLink.html("<a href= '" + response.events[i].url + "' target='_blank'>" + "See Event Details" + "</a>");
             
+            var cardReveal = $("<div>");
+            cardReveal.addClass("card-reveal");
+
+            var cardRevealTitle = $("<span>");
+            cardRevealTitle.addClass("card-title grey-text text-darken-4");
+            cardRevealTitle.text("Event Info");
+
+            var closeIcon = $("<i>");
+            closeIcon.addClass("material-icons right");
+            closeIcon.text("close");
+
+            var eventInfo = $("<p>");
+            eventInfo.html(response.events[i].description.html);
+            console.log(response.events[i].description.html)
+
+
+
 
 
             $("#events-div").append(cardWidth);
@@ -54,6 +65,13 @@ var queryURL = "https://www.eventbriteapi.com/v3/events/search//?categories=103&
             card.append(cardContent);
             cardContent.append(cardTitle);
             cardTitle.append(cardIcon);
+            cardContent.append(cardLink);
+
+            card.append(cardReveal);
+            cardReveal.append(cardRevealTitle);
+            cardRevealTitle.append(closeIcon);
+            cardReveal.append(eventInfo);
+
 
 
         };
