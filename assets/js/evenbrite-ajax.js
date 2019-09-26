@@ -42,6 +42,8 @@ var queryURL = "https://www.eventbriteapi.com/v3/events/search//?categories=103&
             cardIcon.addClass("material-icons right");
             cardIcon.text("more_vert");
 
+            var cardLink = $("<p>");
+            cardLink.html("")
             
 
 
