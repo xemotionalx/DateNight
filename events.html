@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Date Night</title>
+    <title>Date Night - Events</title>
 
     <!-- GOOGLE FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Be+Vietnam&display=swap" rel="stylesheet">
@@ -62,17 +62,80 @@
         </div>
     </header>
 
-
     <div class="content">
+        <div class="row">
+            <div class="searchbar">
+                <div class="searchbar-location">
+                    <div class="input-field col s12">
+                        <select>
+                            <option value="" disabled selected>Choose a location</option>
+                            <option value="1">Philadelphia</option>
+                            <option value="2">New York</option>
+                            <option value="3">LA</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="row">
             <h3 class="heading-secondary center-align">Your Adventure Is Waiting <i
                     class="fas fa-kiss-wink-heart gradient-text"></i></h2>
         </div>
 
 
-        <div class="row" id="events-div">
+        <div class="row" id="events-div-1"></div>
+        <div class="row" id="events-div-2"></div>
+        <div class="row" id="events-div-3"></div>
+    </div>
 
-            <!-- <div class="col s12 m4">
+
+
+
+
+
+
+    <footer class="footer">
+        <div class="footer__logobox">
+            <h4 class="logo">
+                Date Night
+            </h4>
+            <i class="fas fa-kiss-wink-heart"></i>
+        </div>
+        <div class="row">
+            <div class="col s6">
+                <div class="footer__navigation">
+                    <ul class="footer__list">
+                        <li class="footer__item"><a href="#" class="footer__link">Company</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Contact us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col s6">
+                <p class="footer__copyright">
+
+                    Copyright &copy; TEAM 2
+                </p>
+            </div>
+        </div>
+    </footer>
+    </div>
+
+
+    <!--JavaScript at end of body for optimized loading (Materialize) -->
+    <script type="text/javascript" src="assets/materialize/js/materialize.min.js"></script>
+
+    <!-- Javascript for Ajax calls -->
+    <script src="assets/js/evenbrite-ajax.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+<!-- <div class="col s12 m4">
                 <div class="card">
                     <div class="card-image waves-effect waves-block waves-light">
                         <img class="activator" src="assets/images/event_sample.jpg">
@@ -125,49 +188,3 @@
                             </div>
                         </div>
                     </div> -->
-
-
-        </div>
-    </div>
-    
-
-
-
-
-
-
-    <footer class="footer">
-        <div class="footer__logobox">
-            <h4 class="logo">
-                Date Night
-            </h4>
-            <i class="fas fa-kiss-wink-heart"></i>
-        </div>
-        <div class="row">
-            <div class="col s6">
-                <div class="footer__navigation">
-                    <ul class="footer__list">
-                        <li class="footer__item"><a href="#" class="footer__link">Company</a></li>
-                        <li class="footer__item"><a href="#" class="footer__link">Contact us</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col s6">
-                <p class="footer__copyright">
-
-                    Copyright &copy; TEAM 2
-                </p>
-            </div>
-        </div>
-    </footer>
-    </div>
-
-
-    <!--JavaScript at end of body for optimized loading (Materialize) -->
-    <script type="text/javascript" src="assets/materialize/js/materialize.min.js"></script>
-
-    <!-- Javascript for Ajax calls -->
-    <script src="assets/js/evenbrite-ajax.js"></script>
-</body>
-
-</html>
