@@ -2,16 +2,6 @@
 // TBA
 
 
-
-
-
-// Testing Js link & Jquery 
- console.log('test');
- console.log($);
-
-//  
-
-
 // Ajax Calls for api mealbd
 var queryURL = "https://www.themealdb.com/api/json/v1/1/search.php?s=Salmon";
 
@@ -21,59 +11,55 @@ $.ajax({
   method: "GET"
 }).then(function(response) {
   // Testing/Debug Ajax
-     console.log("Object Data:",response);
-     console.log("Recipes Array:",response.meals);
-   console.log("Recipe Selected:",response.meals[0]);
-   console.log("Recipe:",response.meals[0].strMeal);
-   console.log("Recipe Instructions:",response.meals[0].strInstructions);
-   console.log("Recipe Link:",response.meals[0].strSource);
-   console.log("Recipe Picture:",response.meals[0].strMealThumb);
-   console.log("Cuisine:",response.meals[0].strArea);
-   console.log("Type:",response.meals[0].strCategory);
-  console.log("Type:",response.meals[0].strYoutube);
+  //    console.log("Object Data:",response);
+  //    console.log("Recipes Array:",response.meals);
+  //  console.log("Recipe Selected:",response.meals[0]);
+  //  console.log("Recipe:",response.meals[0].strMeal);
+  //  console.log("Recipe Instructions:",response.meals[0].strInstructions);
+  //  console.log("Recipe Link:",response.meals[0].strSource);
+  //  console.log("Recipe Picture:",response.meals[0].strMealThumb);
+  //  console.log("Cuisine:",response.meals[0].strArea);
+  //  console.log("Type:",response.meals[0].strCategory);
+  // console.log("Type:",response.meals[0].strYoutube);
   
-  // Empty the card in html
+  // Empty the cards in html
 
-  $("#view").empty();
+  $("#recipes-div").empty();
 
-  for( var i=0 ; i < 5 ; i++){
+  for( var i=0 ; i < 3 ; i++){
 
-    // html divs
+    console.log(response);
+
+    // new  horizontal card
    var newCard= $("<div>");
-     newCard.addClass("col m4 s12");
-  //  new divs
-  var newDiv = $("<div>");
-      newDiv.addClass("card");
+    newCard.addClass("card horizontal");
 
-   
-// card image div
-var cardImgDiv = $("<div>");
-cardImgDiv.addClass("card-image");
+  //  new card image
+  var cardImgDiv = $("<div>");
+  cardImgDiv.addClass("card-image");
+  var cardImg = $("<img>");
+  cardImg.attr("src", response.meals[i].strMealThumb);
+  cardImg.addClass("activator");
 
-var cardImg = $("<img>");
-    cardImg.addClass("activator");
-    cardImg.attr("src",response.meals[i].strMealThumb);
-
-    // Content div for recipe name
+  //card content
+  var cardStacked = $("<div>");
+  cardStacked.addClass("card-stacked");
+    //recipe title
   var cardContent = $("<div>");
-  cardContent.addClass("card-content");
-  cardContent.text(response.meals[i].strMeal);
+  cardContent.html("<p>" + response.meals[i].strMeal + "</p>");
+  cardStacked.append(cardContent);
+    //link
+  var cardLinkDiv = $("<div>");
+  cardLinkDiv.addClass("card-action");
+  cardLinkDiv.html("<a href= '" + response.meals[i].strSource + "' target='_blank'>" + "View Recipe" + "</a>")
 
-  // Tag for Recipe link
-  var cardLink = $('<p>');
-  cardLink.html("<a href="+ response.meals[i].strSource +"target=_blank>"+"Recipe")
-    
 // Puts everything on Page!
-  $("#view").append(newCard);
-  newCard.append(newDiv);
-  newDiv.append(cardImgDiv);
-  cardImgDiv.append(cardImg);
-  newDiv.append(cardContent);
-  cardContent.append(cardLink);
-
-
- 
-    
+$("#recipes-div").append(newCard);
+newCard.append(cardImgDiv);
+cardImgDiv.append(cardImg);
+newCard.append(cardStacked);
+cardStacked.append(cardLinkDiv);
+  
   };
 
 });
