@@ -74,3 +74,19 @@ body {
         box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
         transform: translateY(0);
     }
+
+
+    /* SEARCH BAR */
+
+    .searchbar {
+        position: relative;
+        width: 100%;
+    }
+
+    .searchbar-location {
+        background-color: #fece8c;
+        width: 25%;
+        position: absolute;
+        top: -75px;
+        left: 75%;
+    }
