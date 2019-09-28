@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="assets/materialize/css/materialize.min.css"
+        media="screen,projection" />
+    <title>Login Page</title>
+</head>
+
+<body class="grey ligten-3">
+    <nav class="z-depth-0 grey lighten-4">
+        <a href="#" class="brand-logo">
+            <img src="#" style="width: 180px; margin-top: 10px;">
+        </a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li class="logged-in">
+                <a href="#" class="grey-text modal-trigger" data-target="modal-account">Account</a>
+
+            </li>
+            <li class="logged-in">
+                <a href="#" class="grey-text" id="logout">Logout</a>
+            </li>
+
+            <li class="logged-out">
+                <a href="#" class="grey-text modal-trigger" data-target="modal-login">Login</a>
+
+            </li>
+            </li>
+            <li class="logged-out">
+                <a href="#" class="grey-text modal-trigger" data-target="modal-signup">Sign Up</a>
+
+            </li>
+
+        </ul>
+    </nav>
+
+    <!-- Sign up Modal -->
+    <div id="modal-signup" class="modal">
+        <div class="modal-content">
+            <h4>Sign up</h4><br />
+            <form id="signup-form">
+                <div class="input-field">
+                    <input type="email" id="signup-email" required />
+                    <label for="signup-email">Email address</label>
+                </div>
+                <div class="input-field">
+                    <input type="password" id="signup-password" required />
+                    <label for="signup-password">Choose password</label>
+
+                </div>
+                <button class="btn yellow darken-2 z-depth-0"> Sign up</button>
+
+            </form>
+        </div>
+    </div>
+
+    <!-- Sign in -->
+
+    <div id="modal-login" class="modal">
+        <div class="modal-content">
+            <h4>Login</h4><br />
+            <form id="login-form">
+                <div class="input-field">
+                    <input type="email" id="login-email" required />
+                    <label for="login-email">Email address</label>
+                </div>
+                <div class="input-field">
+                    <input type="password" id="login-password" required />
+                    <label for="login-password">Choose password</label>
+
+                </div>
+                <button class="btn yellow darken-2 z-depth-0"> Login</button>
+
+            </form>
+        </div>
+    </div>
+
+    <!-- Account Modal -->
+    <div id="modal-account" class="modal">
+        <div class="modal-content center-align">
+            <h4>Account details</h4><br />
+            <div class="account-details"></div>
+        </div>
+    </div>
+
+    <!-- Guide List -->
+    <div class="container" style="margin-top: 40px" ;>
+        <ul class="collapsible z-depth-0 guides" style="border: none;">
+            <li>
+                <div class="collapsible-header grey ligten-4">Page Content?</div>
+                <div class="collapsible-body white">Lorem, ipsum dolor</div>
+            </li>
+            <li>
+                <div class="collapsible-header grey ligten-4">Page Content?</div>
+                <div class="collapsible-body white">Lorem, ipsum dolor</div>
+            </li>
+            <li>
+                <div class="collapsible-header grey ligten-4">Page Content?</div>
+                <div class="collapsible-body white">Lorem, ipsum dolor</div>
+            </li>
+            <li>
+                <div class="collapsible-header grey ligten-4">Page Content?</div>
+                <div class="collapsible-body white">Lorem, ipsum dolor</div>
+            </li>
+
+        </ul>
+
+    </div>
+
+
+
+
+    <!-- Fire Base -->
+     <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-app.js"></script> 
+     <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-auth.js"></script> -->
+     <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-firestore.js"></script> -->
+   
+
+    <!-- A jax -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="assets/materialize/js/materialize.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ 
+    <!-- Compiled and minified JavaScript -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+            
+    <!-- Js Link -->
+    <script src="assets/js/login.js">   </script>
+</body>
+
+</html>
