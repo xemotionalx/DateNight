@@ -3,6 +3,7 @@ $(document).ready(function () {
     //Initialize Materialize search form - location
     $('select').formSelect();
 
+    //Determinequery url based on user profile
     var user = "homebody";
     var eventsQuery1 = "";
 
