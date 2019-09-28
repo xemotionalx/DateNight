@@ -1,3 +1,4 @@
+
 input[type=text], input[type=password] {
     width: 100%;
     padding: 15px;
@@ -16,10 +17,18 @@ input[type=text], input[type=password] {
     border: 1px solid #f1f1f1;
     margin-bottom: 25px;
   }
+
+  /* Heading text */
+  .signup-heading {
+    font-size: 50px;
+    color: #6d366F;
+    font-family: 'Oleo Script Swash Caps', cursive; 
+  }
+
   
   /* Set a style for all buttons */
-  button {
-    background-color: #4CAF50;
+  .form-btn {
+    background-color: #fe5651;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -29,14 +38,24 @@ input[type=text], input[type=password] {
     opacity: 0.9;
   }
   
-  button:hover {
+  .form-btn:hover {
     opacity:1;
   }
   
   /* Extra styles for the cancel button */
   .cancelbtn {
     padding: 14px 20px;
-    background-color: #f44336;
+    background-color: rgba(254, 206, 140);
+  }
+
+  .cancelbtn-2 {
+    width: auto;
+    padding: 10px 18px;
+    background-color: rgba(254, 206, 140);
+  }
+
+  button:active {
+    background-color: #fe955b;
   }
   
   /* Float cancel and signup buttons and add an equal width */
@@ -62,4 +81,9 @@ input[type=text], input[type=password] {
     .cancelbtn, .signupbtn {
        width: 100%;
     }
+  }
+
+  /* Drop Down Styling */
+  .user-profile {
+    z-index: 1000;
   }
