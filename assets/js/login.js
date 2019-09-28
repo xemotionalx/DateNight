@@ -1,4 +1,5 @@
-
+// Stored Variables
+var user = "homebody";
 
 // setup materialize componets
 document.addEventListener('DOMContentLoaded', function(){
@@ -97,5 +98,61 @@ auth.signOut().then(() =>{
  
   });
 
+// Store Data
+const docRef = db.collection("samples").doc("homebody");           
+ const outputHeader = document.querySelector('#sample');
+ const inputText = document.querySelector('#newData');
+ const saveButton = document.querySelector("#saveButton");
+//  Test
 
+ console.log("This is outputHeader:",outputHeader);
+ console.log("This is inputText:", inputText);
+ console.log("This is the saveButton", saveButton);
+
+ saveButton.addEventListener("click", function() {
+
+ const texttoSave = inputText.value;
+//  Test
+console.log("I am going to save" + inputText + "to firebase");
+docRef.set({
+
+  outputHeader:inputText.value
+}).then(function (error) {
+
+
+  
+})
+
+ });
+
+
+// Test
+console.log(docRef);
     
+getRealtimeUpadte = function(){
+
+docRef.onSanpshot(function(doc){
+
+  if (doc && doc.exists){
+
+  const MyData = doc.data();     
+ outputHeader.innerText = "homebody" + MyData;
+// Test
+ console.log(MyData);
+
+
+
+  }
+
+
+
+
+})
+
+
+
+
+
+
+
+}
