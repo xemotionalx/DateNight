@@ -6,6 +6,8 @@ $(document).ready(function () {
     //Determinequery url based on user profile
     var user = "homebody";
     var eventsQuery1 = "";
+    var eventsQuery2 = "";
+    var eventsQuery3 = "";
 
     if (user === "athletic") {
         eventsQuery1 = "https://www.eventbriteapi.com/v3/events/search//?subcategories=3008&location.address=philadelphia&location.within=5km&expand=venue&token=DNHTAISTPZBP2YMQRXIP";
