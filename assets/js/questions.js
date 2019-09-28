@@ -112,6 +112,8 @@ function questionLoad() {
   }
 }
 
+$("#reset-button").hide();
+
 function nextQuestion() {
   let remainingQuestions = questionBank.length - 1;
   if (remainingQuestions === firstQuestion) {
@@ -152,31 +154,44 @@ $("#next-button").on("click", function () {
 //create general copy of each category to display
 function quizEnd() {
   solutionBank.forEach(function (answer) {
-      switch (answer) {
+    switch (answer) {
       case "agree":
         correctA++;
         break;
-        case "disagree":
-          correctD++;
-          break;
-        }
-      });
-      console.log("a " + correctA)
-      console.log("d " + correctD)
-      if (correctA > 10){
-        console.log ("you're adventurous");
-        $("#result").html("<h4>"+"'Life begins at the end of your comfort zone.'"+"</h4>"+"<h6>"+"~Neale Donald Walsch~"+"</h6>"+"<p>"+"Congratulation...you are an adventurer."+"</p>"+"<p>"+"You have a passion for exploration into all areas of life.  You thrive on taking risks and you make fear the fuel for your mental toughness. You're willing to stretch yourself to try new and interesting foods, ceremonies and situations."+"For additional information on being an adventurer, reference the following article: '<a target = '_blank' href = 'https://www.lifehack.org/287511/8-surprising-signs-you-might-natural-born-adventurer'>'8 Surprising Signs You Might be a Natural Born Adventurer'</a>'.")
-      }
-      else if (correctD > 10){
-        console.log ("you're homebody");
-        $("#result").html("<h4>"+ "'I don't want to be alone. I want to be lefts alone.'"+"</h4>"+"<h6>"+ "~Audrey Hepburn~" + "</h6>" + "<p>" + "Congratulations...you're a homebody."+"You are all about hearth and home.  You look forward to weekends because it means that you don't have to leave your home. Even though you're no party animal, you are willing to play host/hostess on occasion to your closest friends."+ "</p>"+"<p>"+ "For additional information on being a homebody, reference the following article:'<a target = '_blank' href = 'https://www.fromroses.co.uk/blog/lessons-learnt-from-being-a-introvert-a-homebody'>'Lessons Learnt from Being an Introvert & a Homebody'</a>")
-      }else {
-        console.log ("you're a non-conformist");
-        $("#result").html("<h4>"+ "'Imitation is suicide.'" + "</h4>"+ "<h6>"+"~ Ralph Waldo Emerson ~" + "</h6>"+"<p"+"Congratulations...you are a nonconformist."+"</p"+"<p>"+"You believe in bucking trends and going your own way. In general, you refuse to follow prevailing rules or practices.  This tendency means that you're willing to try something outside normal."+"</p>"+"<p>"+"For additional information on being a nonconformist, reference the following article: '<a target = '_blank' href = 'https://sloanreview.mit.edu/article/the-surprising-benefits-of-nonconformity/'>'The surprising Benefits of Nonconformity'</a>'");
-      } 
+      case "disagree":
+        correctD++;
+        break;
     }
+  });
+  console.log("a " + correctA)
+  console.log("d " + correctD)
+  if (correctA > 10) {
+    console.log("you're adventurous");
+    $("#result").html("<h4>" + "'Life begins at the end of your comfort zone.'" + "</h4>" + "<h6>" + "~Neale Donald Walsch~" + "</h6>" + "<p>" + "Congratulations...you are an adventurer." + "</p>" + "<p>" + "You have a passion for exploration into all areas of life.  You thrive on taking risks and you make fear the fuel for your mental toughness. You're willing to stretch yourself to try new and interesting foods, ceremonies and situations." + "For additional information on being an adventurer, reference the following article: '<a target = '_blank' href = 'https://www.lifehack.org/287511/8-surprising-signs-you-might-natural-born-adventurer'>'8 Surprising Signs You Might be a Natural Born Adventurer'</a>'.")
+  }
+  else if (correctD > 10) {
+    console.log("you're homebody");
+    $("#result").html("<h4>" + "'I don't want to be alone. I want to be lefts alone.'" + "</h4>" + "<h6>" + "~Audrey Hepburn~" + "</h6>" + "<p>" + "Congratulations...you're a homebody." + "You are all about hearth and home.  You look forward to weekends because it means that you don't have to leave your home. Even though you're no party animal, you are willing to play host/hostess on occasion to your closest friends." + "</p>" + "<p>" + "For additional information on being a homebody, reference the following article:'<a target = '_blank' href = 'https://www.fromroses.co.uk/blog/lessons-learnt-from-being-a-introvert-a-homebody'>'Lessons Learnt from Being an Introvert & a Homebody'</a>")
+  } else if (correctA == 0 && correctD == 0) {
+    $("#result").html("<p>" + "You didn't answer any of the questions. Please click on the below and return to the questions." + "</p>")
 
+  }
+  else {
+    console.log("you're a non-conformist");
+    $("#result").html("<h4>" + "'Imitation is suicide.'" + "</h4>" + "<h6>" + "~ Ralph Waldo Emerson ~" + "</h6>" + "<p>" + "Congratulations...you are a nonconformist." + "</p" + "<p>" + "You believe in bucking trends and going your own way. In general, you refuse to follow prevailing rules or practices.  This tendency means that you're willing to try something outside normal." + "</p>" + "<p>" + "For additional information on being a nonconformist, reference the following article: '<a target = '_blank' href = 'https://sloanreview.mit.edu/article/the-surprising-benefits-of-nonconformity/'>'The surprising Benefits of Nonconformity'</a>'");
+  }
+}
 
+function reset() {
+  $("#reset-button").show();
+  $("#reset-button").hide();
+  firstQuestion = 0;
+  firstAnswer = 0;
+  correctA = 0;
+  correctD = 0;
+  //$("#answer-display").hide();
+  //$("#next-button").show();
+}
 
 
 
