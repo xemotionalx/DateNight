@@ -33,7 +33,7 @@
     margin-top: 0;
     text-transform: uppercase;
     letter-spacing: 4px;
-    text-shadow: 0 0 3px #4F2E65, 0 0 5px #6d366F;
+    text-shadow: 2px 2px 3px #4F2E65;
     color: #fff;
  }
 
@@ -51,8 +51,10 @@
 
  .btn-splash a:link,
  .btn-splash a:visited {
-     color: #222;
-     font-size: 14px;
+     color: #fff;
+     text-shadow: 1px 1px 3px #4F2E65;
+     font-weight: 600;
+     font-size: 16px;
      padding: 5px;
 
  }
@@ -74,8 +76,6 @@
     color: #FECE8C;
  }
 
-
-
  /* BUTTON GRADIENT ANIMATIONS */
  
 @keyframes btn-splash-animate {
@@ -83,3 +83,60 @@
     50%{background-position:100% 50%}
     100%{background-position:100% 0%}
 }
+
+
+/* POPUP STYLING */
+
+.popup {
+   height: 100vh;
+   width: 100%;
+   background-image: linear-gradient(to bottom left, rgba(109, 54, 111, .8), rgba(254, 206, 140, .8));
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 999;
+ 
+   opacity: 0; 
+   visibility: hidden;
+   transition: all .5s;
+   }
+ 
+   .popup:target {
+     opacity: 1;
+     visibility: visible;
+   }
+
+   .popup__content {
+      position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+      width: 50%;
+      background-color: #fff;
+      box-shadow: 2px 3px 4px rgba(0, 0, 0, .7);
+      border-radius: 3px;
+  }
+
+  .popup__btn {
+   color: #999;
+   text-transform: uppercase;
+   background-color: #fff;
+   border-radius: 30px;
+   outline: none;
+   box-shadow: none;
+   padding: 30px;
+  }
+
+   .popup__btn:active {
+       transform: translateY(2px);
+       box-shadow: 0 5px 1rem rgba(#000, .2);
+   }
+
+   .popup__btn--exit {
+       font-size: 23px;
+       border: transparent;
+   }
+
+   .popup__btn--exit:hover {
+      color: #fe5651;
+  }

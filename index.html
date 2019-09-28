@@ -26,31 +26,108 @@
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/splash.css">
+    <link rel="stylesheet" href="assets/css/signup.css">
 
 </head>
 
 <body>
 
-    <section class="section-splash">
+    <section class="section-splash" id="home">
 
-            <div class="section-splash__text-box">
-                <div class="section-splash__heading-primary">
-                    <h1 class="heading-primary--main"> Date Night</h1>
-                    <h2 class="heading-primary--sub">Your Romance is One of a Kind. Your Dates Should Be, Too. </h2>
-                    
+        <div class="section-splash__text-box">
+            <div class="section-splash__heading-primary">
+                <h1 class="heading-primary--main"> Date Night</h1>
+                <h2 class="heading-primary--sub">Your Romance is One of a Kind. Your Dates Should Be, Too. </h2>
 
-                    <button class="btn btn-splash">
-                        <a href="signup.html">Create A Profile</a>
-                    </button>
 
-                    <button class="btn btn-splash">
-                        <a href="home.html">Continue to Site</a>
-                    </button>
+                <button class="btn btn-splash">
+                    <a href="#signup">Sign Up</a>
+                </button>
 
-                    <h3 class="heading-primary-sub-2"> Browse curated picks for your perfect date night.</h3>
-                </div>
+                <button class="btn btn-splash">
+                    <a href="#login">Log In</a>
+                </button>
+
+                <h3 class="heading-primary-sub-2"> Browse curated picks for your perfect date night.</h3>
             </div>
-        </section>
+        </div>
+    </section>
+
+    <div class="popup" id="signup">
+        <div class="popup__content">
+            <form action="/action_page.php" style="border:1px solid #ccc">
+                <div class="container">
+                    <h1 class="signup-heading">Sign Up</h1>
+                    <p>Welcome to your own personalized romantic advisor!</p>
+                    <hr>
+
+                    <label for="email"><b>Email</b></label>
+                    <input type="text" placeholder="Enter Email" name="email" required>
+
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+
+                    <label for="psw-repeat"><b>Repeat Password</b></label>
+                    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+                    <!-- 
+                    <label for="user-profile"><b>What type of couple are you?</b></label>
+                    <br>
+                    <select name="user-profile" class="user-profile" required>
+                        <option value="athletic">Athletic/Outdoorsy</option>
+                        <option value="foodie">Foodie</option>
+                        <option value="party">Party</option>
+                        <option value="quirky">Quirky</option>
+                        <option value="homebody">Homebody</option>
+                    </select>
+                    <br>
+                    <br>
+     -->
+                    <div class="clearfix">
+                        <a href="#home">
+                            <button type="button" class="cancelbtn form-btn">Cancel</button>
+                        </a>
+                        <a href="#home">
+                            <a href="questions.html">
+                                <button type="submit" class="signupbtn form-btn">Sign Up!</button>
+                            </a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+    <div class="popup" id="login">
+        <div class="popup__content">
+
+            <form action="action_page.php" method="post">
+                <div class="container">
+                    <h1 class="signup-heading">Log In</h1>
+                    <p>Here's to a perfect date night for you and your cutie!</p>
+                    <hr>
+                    <label for="uname"><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="uname" required>
+
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+
+                    <a href="home.html">
+                        <button type="submit" class="form-btn">Login</button>
+                    </a>
+                </div>
+                <div class="container" style="background-color:#f1f1f1">
+
+                    <a href="#home">
+                    <button type="button" class="cancelbtn-2">Cancel</button>
+                </a>
+                    <span class="psw">Forgot <a href="#">password?</a></span>
+                </div>
+            </form>
+
+        </div>
+    </div>
+
 </body>
 
 </html>
