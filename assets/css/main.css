@@ -81,12 +81,17 @@ body {
     .searchbar {
         position: relative;
         width: 100%;
+        padding: .5rem;
+        background-color: #6d366f;
+        text-align: center;
+        color: #fff;
     }
 
     .searchbar-location {
-        background-color: #fece8c;
         width: 25%;
-        position: absolute;
-        top: -75px;
-        left: 75%;
+        float: right;
+    }
+
+    .searchbar-date {
+        width: 25%;
     }

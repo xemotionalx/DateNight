@@ -3,8 +3,19 @@ $(document).ready(function () {
     //Initialize Materialize search form - location
     $('select').formSelect();
 
+    //Initialize Materialize date picker form
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.datepicker');
+        var instances = M.Datepicker.init(elems, options);
+      });
+    
+      // Or with jQuery
+      $(document).ready(function(){
+        $('.datepicker').datepicker();
+      });
+
     //Determinequery url based on user profile
-    var user = "homebody";
+    var user = "quirky"
     var eventsQuery1 = "";
     var eventsQuery2 = "";
     var eventsQuery3 = "";
