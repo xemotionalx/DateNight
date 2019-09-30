@@ -30,11 +30,11 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
-// make auth and firestore references
+// make auth and firebase references
 const auth = firebase.auth();
 const db = firebase.database();
-// update firestore settings
-// db.settings({timestampsInSnapshots: true});
+// update firebase settings
+
 
 
 // Sign up
@@ -54,10 +54,13 @@ signupForm.addEventListener('submit', (event) => {
   auth.createUserWithEmailAndPassword(email, password).then(cred => {
     // Test
     console.log(cred);
-     db.ref('/users').push({
-       uid:cred.user.uid, 
-       email: email
-     });
+    db.ref('/users').push({
+      uid: cred.user.uid,
+      email: email
+
+
+
+    });
     // const modal = document.querySelector('#modal-signup');
     // MSAssertion.Modal.getInstance(modal).close();
     signupForm.reset();
@@ -126,13 +129,18 @@ saveButton.addEventListener("click", function () {
 
 
 
-  })
 
+
+  });
 });
+  // Saving data
+  const preObject = document.getElementById('#object');
 
+  // Sinchorizing data 
+  const dbRefObject = firebase.database().ref().child('object');
 
-// Test
-
+  // Sync object changes
+  dbRefObject.on('value', snap => console.log(snap.val()));
 
 
 
