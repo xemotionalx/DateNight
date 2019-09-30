@@ -21,6 +21,11 @@
     background-position: top;
 }
 
+.header-media {
+    background-image: url(../images/headers/media_header.jpg);
+    background-position: center;
+}
+
 
 /* HEADER TEXTBOX */
 
