@@ -1,0 +1,82 @@
+#flickering-text:hover {
+    /* background-image: linear-gradient(to bottom right, #fece8c, #fe955b, #6d366f, #4F2E65); */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-size: 300% 300%;
+    transform-origin: center bottom;
+    animation-name: flame;
+    animation-duration: 1s;
+    animation-delay: 200ms;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    text-shadow: 0 0 10px #FECE8C, 0 0 10px #fe5651;
+}
+
+@keyframes flame {
+    0% {
+        background-size: 300% 300%;
+        background-color: #fece8c;
+    }
+    15% {
+        background-size: 300% 300%;
+        background-image: linear-gradient(to top, #fece8c, #fece8c, #fe5651, #fece8c, #fece8c);
+    }
+    25% {
+        background-size: 300% 300%;
+        background-image: linear-gradient(to top, #fece8c, #fece8c, #fe5651, #fe5651);
+    }
+    50% {
+        background-size: 300% 300%;
+        background-image: linear-gradient(to top, #fece8c, #fe5651, #fece8c);
+    }
+    75% {
+        background-size: 300% 300%;
+        background-image: linear-gradient(to top, #fece8c, #fe5651, #fece8c, #fece8c);
+    }
+    790% {
+        background-size: 300% 300%;
+        background-image: linear-gradient(to top, #fece8c, #fece8c, #fe5651, #fe5651, #fece8c);
+    }
+    100% {
+        background-size: 300% 300%;
+        background-image: linear-gradient(to top, #fece8c, #fece8c, #fe5651);
+    }
+}
+
+@keyframes grow {
+    0% {
+        background: linear-gradient(329deg, #fece8c, #fe5651, #6d366f);
+    }
+    10% {
+        background: linear-gradient(329deg, #fece8c, #fece8c, #fe5651, #6d366f);
+    }
+    20% {
+        background-image: linear-gradient(329deg, #fece8c, #fece8c, #fece8c, #fe5651, #6d366f)
+    }
+    30% {
+        background-image: linear-gradient(329deg, #fece8c, #fece8c, #fece8c, #fe5651)
+    }
+    40% {
+        background-image: linear-gradient(329deg, #6d366f, #fe5651, #fece8c, #fece8c, #fe5651)
+    }
+    50% {
+        background-image: linear-gradient(329deg, #6d366f, #fe5651, #fece8c, #fece8c)
+    }
+    60% {
+        background-image: linear-gradient(329deg, #6d366f, #fe5651, #fe5651, #fece8c)
+    }
+    70% {
+        background-image: linear-gradient(329deg, #fe5651, #6d366f, #fe5651)
+    }
+    80% {
+        background-image: linear-gradient(329deg, #fece8c, #fe5651, #6d366f, #fe5651)
+    }
+    90% {
+        background-image: linear-gradient(329deg, #fece8c, #fe5651, #6d366f, )
+    }
+    100% {
+        background-image: linear-gradient(329deg, #fece8c, #fe5651, #6d366f, )
+    }
+}
