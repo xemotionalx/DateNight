@@ -31,6 +31,7 @@
 
 .header__textbox {
     position: absolute;
+    width: 80%;
     left: 50%;
     top: 40%;
     transform: translate(-50%, -50%);
@@ -49,6 +50,12 @@
     background: linear-gradient(329deg, #fece8c, #fe5651, #6d366f);
     border-radius: 50px;
     width: 20%;
+}
+
+.btn-quiz:hover {
+    transform: translateY(-2px);
+    animation: grow 1.5s;
+    animation-iteration-count: infinite;
 }
 
 .btn-quiz:active {
@@ -124,4 +131,38 @@
 
 .navbar__link {
     float: right;
+}
+
+@media only screen and (max-width: 780px) {
+    .heading-text {
+        font-size: 15vw;
+        margin: 10px;
+    }
+    .btn-quiz {
+        width: 40%;
+    }
+    .header-events__textbox {
+        position: absolute;
+        width: 80%;
+        left: 50%;
+        top: 40%;
+        transform: translate(-50%, -50%);
+        hyphens: auto;
+    }
+    .events-heading {
+        font-size: 40px;
+    }
+    .events-heading-sub {
+        font-size: 40px;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    /* .heading-text {
+        font-size: 40px;
+    } */
+    .btn-quiz {
+        font-size: 10px;
+        width: 80%;
+    }
 }
