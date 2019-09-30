@@ -21,6 +21,8 @@ body {
     font-weight: 700;
     font-size: 45px;
     color: #4F2E65;
+    margin-bottom: 40px;
+    hyphens: auto;
 }
 
 .gradient-text {
@@ -34,7 +36,7 @@ body {
 /* MAIN CONTENT */
 
 .content {
-    background-color: #f7f7f7;
+    background-color: rgb(252, 249, 249);
     min-height: 100vh;
 }
 
@@ -47,6 +49,7 @@ body {
     padding: 0;
     border-radius: 3px;
     text-align: center;
+    margin-bottom: 25px;
 }
 
 
@@ -54,6 +57,7 @@ body {
 
 .btn-text {
     margin-right: 50px;
+    margin-bottom: 100px;
 }
 
 .btn-text:link,
@@ -90,6 +94,8 @@ body {
     text-align: center;
     color: #fff;
     margin-top: -20px;
+    padding-top: 20px;
+    text-align: center;
 }
 
 .search-div {
@@ -104,6 +110,9 @@ body {
     padding: 10px;
     position: relative;
 }
+
+
+/* DINING SEARCH FORMATTING */
 
 .restaurants-search-div {
     background-image: url(../images/dining/restaurants-img.jpg);
@@ -133,4 +142,11 @@ body {
 
 #dining-search-form {
     width: 80%;
+}
+
+@media only screen and (max-width: 780px) {
+    .searchbar-event,
+    .searchbar-location {
+        width: 100%;
+    }
 }

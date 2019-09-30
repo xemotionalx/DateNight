@@ -1,6 +1,6 @@
 .profile-box {
     background-image: url(../images/profile/adventurous-bg.jpeg);
-    padding: 10px 0;
+    /* padding: 10px 0; */
     text-align: center;
     border-radius: 4px;
     height: 400px;
@@ -15,9 +15,8 @@
 
 .profile__text {
     font-size: 22px;
-    height: 500px;
     color: #fff;
-    padding: 100px;
+    padding: 0 100px;
     border-radius: 3px;
     display: block;
     justify-content: center;
@@ -27,9 +26,6 @@
     font-family: 'Oleo Script Swash Caps', cursive;
     color: white;
     font-size: 70px;
-    position: absolute;
-    top: 5px;
-    right: 50px;
 }
 
 
@@ -38,4 +34,50 @@
 .favs-title {
     font-size: 25px;
     color: #4F2E65;
+}
+
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 1250px) {
+    .profile__text {
+        font-size: 18px;
+    }
+    .profile__title {
+        font-size: 60px;
+    }
+}
+
+@media only screen and (max-width: 970px) {
+    .profile__text {
+        font-size: 16px;
+    }
+    .profile__title {
+        font-size: 50px;
+    }
+}
+
+@media only screen and (max-width: 840px) {
+    .profile__text {
+        font-size: 14px;
+        padding: 0 50px;
+    }
+    .profile__title {
+        font-size: 45px;
+    }
+}
+
+@media only screen and (max-width: 780px) {
+    .profile__text {
+        padding: 0 30px;
+    }
+    .profile__title {
+        font-size: 30px;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .profile__text {
+        padding: 0 10px;
+    }
 }
