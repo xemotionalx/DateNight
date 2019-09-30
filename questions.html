@@ -15,29 +15,40 @@
 </head>
 
 <body>
-    <div id="bigbox">
+    <header></header>
+    <div id="biggerbox">
         <!--create container div-->
-        <div id="container" class="quiz-container">
+        <div id="bigbox" class="quiz-container">
             <!--create div for quiz-->
-            <div id="title">
-                <h1>Romance Quiz</h1>
+            <div id="title" class="jumbotron jumbotron-fluid">
+                <div class="container">
+                    <h1>Romance Quiz</h1>
+                </div>
             </div>
+            <div id="instructions">
+                <p>Take our quick quiz to customize your experience. Think about how both you and significant other
+                    would respond to each statement before making your choice.</p>
+                <p>Click start button to begin quiz</p>
+            </div>
+            <button id="start-button" type="button" class="btn btn-primary">Start</button>
 
             <div id="question" class="question"></div>
+            <br>
             <div>
                 <button id="next-button" type="button" class="btn btn-primary">Next</button>
-
             </div>
         </div>
         <div id="result" class="results-box">
             <div id="category" class="results"></div>
-            <button id="reset-button" type="button" class="btn btn-primary">Return to Questions</button>
-
+            <div id="button-box">
+                <button id="reset-button" type="button" class="btn btn-primary">Return to Questions</button>
+                <button id="continue-button" type="button" class="btn btn-primary">Continue</button>
+            </div>
         </div>
-    </div>
-
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="./assets/js/questions.js"></script>
+        <footer></footer>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript" src="./assets/js/questions.js"></script>
 </body>
+
 
 </html>

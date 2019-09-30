@@ -1,4 +1,33 @@
+body{
+    background-color: #4d6680;
+    background-repeat: no-repeat;
+    color: aliceblue;
+}
 #bigbox{
 margin-left: 100px;
+margin-right: 100px;
 }
 
+.jumbotron{
+    background-color: #4d6680;
+    border-bottom: 3px solid black;
+}
+#result{
+    margin-left: 300px;
+    margin-right: 300px;
+}
+#button-box{
+    margin-top: 100px;
+}
+#instructions, #start-button{
+    margin-left: 100px;
+}
+#start-button{
+    margin-top: 25px;
+}
+#question{
+    margin-left: 115px;
+}
+#next-button{
+    margin-left: 115px;
+}
