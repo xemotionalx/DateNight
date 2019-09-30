@@ -9,7 +9,9 @@ body {
     font-family: 'Be Vietnam', sans-serif;
 }
 
+
 /* TYPOGRAPHY */
+
 .logo {
     font-size: 25px;
     font-family: 'Oleo Script Swash Caps', cursive;
@@ -21,7 +23,6 @@ body {
     color: #4F2E65;
 }
 
-
 .gradient-text {
     background-image: linear-gradient(to bottom right, #fece8c, #fe955b, #6d366f, #4F2E65);
     -webkit-background-clip: text;
@@ -29,14 +30,16 @@ body {
     color: transparent;
 }
 
+
 /* MAIN CONTENT */
+
 .content {
     background-color: #f7f7f7;
     min-height: 100vh;
 }
 
 .section-heading {
-    background: linear-gradient(329deg,#6d366f, #fe955b, #fece8c);
+    background: linear-gradient(329deg, #6d366f, #fe955b, #fece8c);
     margin-top: 20px;
     font-family: 'Oleo Script Swash Caps', cursive;
     color: #fff;
@@ -46,6 +49,7 @@ body {
     text-align: center;
 }
 
+
 /* BUTTONS */
 
 .btn-text {
@@ -53,45 +57,80 @@ body {
 }
 
 .btn-text:link,
-    .btn-text:visited {
-        font-size: 20px;
-        color:#6d366f;
-        display: inline-block;
-        text-decoration: none;
-        border-bottom: 3px solid #fece8c;
-        padding: 3px;
-        transition: all .2s;
-    }
+.btn-text:visited {
+    font-size: 20px;
+    color: #6d366f;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 3px solid #fece8c;
+    padding: 3px;
+    transition: all .2s;
+}
 
-    .btn-text:hover {
-        background-color: #fe955b;
-        color: #6d366f;
-        box-shadow: 0 1rem 2rem rgba(0, 0, 0 .15);
-        transform: translateY(-2px);
-    }
+.btn-text:hover {
+    background-color: #fe955b;
+    color: #6d366f;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0 .15);
+    transform: translateY(-2px);
+}
 
-    .btn-text:active {
-        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
-        transform: translateY(0);
-    }
+.btn-text:active {
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+    transform: translateY(0);
+}
 
 
-    /* SEARCH BAR */
+/* SEARCH BAR */
 
-    .searchbar {
-        position: relative;
-        width: 100%;
-        padding: .5rem;
-        background-color: #6d366f;
-        text-align: center;
-        color: #fff;
-    }
+.searchbar {
+    position: relative;
+    width: 100%;
+    padding: 5px 5px .5px 5px;
+    background-color: #6d366f;
+    text-align: center;
+    color: #fff;
+    margin-top: -20px;
+}
 
-    .searchbar-location {
-        width: 25%;
-        float: right;
-    }
+.search-div {
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+    border-radius: 3px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .2);
+    text-align: center;
+    padding: 10px;
+    position: relative;
+}
 
-    .searchbar-date {
-        width: 25%;
-    }
+.restaurants-search-div {
+    background-image: url(../images/dining/restaurants-img.jpg);
+    background-position: center;
+}
+
+.recipes-search-div {
+    background-image: url(../images/dining/recipes-img.jpg);
+    padding-top: 30px;
+    background-position: top;
+}
+
+.search-div-content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.search-div-text {
+    color: #fff;
+    font-weight: 700;
+    font-size: 40px;
+    text-shadow: 5px 5px 3px rgba(0, 0, 0, .5);
+    margin-bottom: 20px;
+}
+
+#dining-search-form {
+    width: 80%;
+}

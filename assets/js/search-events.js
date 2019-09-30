@@ -1,34 +1,46 @@
-$(document).ready(function () {
+$( document ).ready(function () { 
 
-    //Initialize Materialize search form - location
-    $('select').formSelect();
+var location;
+var user;
+var eventsQuery1 = "";
+var eventsQuery2 = "";
+var eventsQuery3 = "";
 
-    //Determine query url based on user profile
-    var user = "quirky"
-    var eventsQuery1 = "";
-    var eventsQuery2 = "";
-    var eventsQuery3 = "";
+
+$("#search-btn").on("click", function() {
+
+    event.preventDefault();
+    $("#events-div-1").empty();
+    $("#events-div-2").empty();
+    $("#events-div-3").empty();
+
+    location = $("#location-input").val();
+    user = $("#event-input").val();
+
+    if (location === null) {
+        location = "philadelphia";
+    };
 
     if (user === "athletic") {
-        eventsQuery1 = "https://www.eventbriteapi.com/v3/events/search//?subcategories=3008&location.address=philadelphia&location.within=5km&expand=venue&token=DNHTAISTPZBP2YMQRXIP";
-        eventsQuery2 = "https://www.eventbriteapi.com/v3/events/search//?categories=109&location.address=philadelphia&location.within=5km&expand=venue&token=DNHTAISTPZBP2YMQRXIP";
-        eventsQuery3 = "https://www.eventbriteapi.com/v3/events/search//?categories=108&location.address=philadelphia&location.within=5km&expand=venue&token=DNHTAISTPZBP2YMQRXIP";
+        eventsQuery1 = "https://www.eventbriteapi.com/v3/events/search//?subcategories=3008&location.address=" + location + "&location.within=5km&expand=venue&token=DNHTAISTPZBP2YMQRXIP";
+        eventsQuery2 = "https://www.eventbriteapi.com/v3/events/search//?categories=109&location.address=" + location + "&location.within=5km&expand=venue&token=DNHTAISTPZBP2YMQRXIP";
+        eventsQuery3 = "https://www.eventbriteapi.com/v3/events/search//?categories=108&location.address=" + location + "&location.within=5km&expand=venue&token=DNHTAISTPZBP2YMQRXIP";
     } else if (user === "foodie") {
-        eventsQuery1 = "https://www.eventbriteapi.com/v3/events/search//?categories=110&location.address=philadelphia&location.within=5km&expand=venue&token=DNHTAISTPZBP2YMQRXIP";
-        eventsQuery2 = "https://www.eventbriteapi.com/v3/events/search//?categories=113&location.address=philadelphia&location.within=5km&expand=venue&token=DNHTAISTPZBP2YMQRXIP";
-        eventsQuery3 = "https://www.eventbriteapi.com/v3/events/search//?categories=105&location.address=philadelphia&location.within=5km&expand=venue&token=DNHTAISTPZBP2YMQRXIP";
+        eventsQuery1 = "https://www.eventbriteapi.com/v3/events/search//?categories=110&location.address=" + location + "&location.within=5km&expand=venue&token=DNHTAISTPZBP2YMQRXIP";
+        eventsQuery2 = "https://www.eventbriteapi.com/v3/events/search//?categories=113&location.address=" + location + "&location.within=5km&expand=venue&token=DNHTAISTPZBP2YMQRXIP";
+        eventsQuery3 = "https://www.eventbriteapi.com/v3/events/search//?categories=105&location.address=" + location + "&location.within=5km&expand=venue&token=DNHTAISTPZBP2YMQRXIP";
     } else if (user === "party") {
-        eventsQuery1 = "https://www.eventbriteapi.com/v3/events/search//?subcategories=3006&location.address=philadelphia&location.within=5km&expand=venue&token=DNHTAISTPZBP2YMQRXIP";
-        eventsQuery2 = "https://www.eventbriteapi.com/v3/events/search//?subcategories=5010&location.address=philadelphia&location.within=5km&expand=venue&token=DNHTAISTPZBP2YMQRXIP";
-        eventsQuery3 = "https://www.eventbriteapi.com/v3/events/search//?subcategories=3008&location.address=philadelphia&location.within=5km&expand=venue&token=DNHTAISTPZBP2YMQRXIP";
+        eventsQuery1 = "https://www.eventbriteapi.com/v3/events/search//?subcategories=3006&location.address=" + location + "&location.within=5km&expand=venue&token=DNHTAISTPZBP2YMQRXIP";
+        eventsQuery2 = "https://www.eventbriteapi.com/v3/events/search//?subcategories=5010&location.address=" + location + "&location.within=5km&expand=venue&token=DNHTAISTPZBP2YMQRXIP";
+        eventsQuery3 = "https://www.eventbriteapi.com/v3/events/search//?subcategories=3008&location.address=" + location + "&location.within=5km&expand=venue&token=DNHTAISTPZBP2YMQRXIP";
     }  else if (user === "quirky") {
-        eventsQuery1 = "https://www.eventbriteapi.com/v3/events/search//?subcategories=3009&location.address=philadelphia&location.within=5km&expand=venue&token=DNHTAISTPZBP2YMQRXIP";
-        eventsQuery2 = "https://www.eventbriteapi.com/v3/events/search//?categories=105&location.address=philadelphia&location.within=5km&expand=venue&token=DNHTAISTPZBP2YMQRXIP";
-        eventsQuery3 = "https://www.eventbriteapi.com/v3/events/search//?categories=104&location.address=philadelphia&location.within=5km&expand=venue&token=DNHTAISTPZBP2YMQRXIP";
+        eventsQuery1 = "https://www.eventbriteapi.com/v3/events/search//?subcategories=3009&location.address=" + location + "&location.within=5km&expand=venue&token=DNHTAISTPZBP2YMQRXIP";
+        eventsQuery2 = "https://www.eventbriteapi.com/v3/events/search//?categories=105&location.address=" + location + "&location.within=5km&expand=venue&token=DNHTAISTPZBP2YMQRXIP";
+        eventsQuery3 = "https://www.eventbriteapi.com/v3/events/search//?categories=104&location.address=" + location + "&location.within=5km&expand=venue&token=DNHTAISTPZBP2YMQRXIP";
     } else if (user === "homebody") {
-        eventsQuery1 = "https://www.eventbriteapi.com/v3/events/search//?subcategories=3003&location.address=philadelphia&location.within=5km&expand=venue&token=DNHTAISTPZBP2YMQRXIP";
-        eventsQuery2 = "https://www.eventbriteapi.com/v3/events/search//?subcategories=7004&location.address=philadelphia&location.within=10km&expand=venue&token=DNHTAISTPZBP2YMQRXIP";
-        eventsQuery3 = "https://www.eventbriteapi.com/v3/events/search//?subcategories=4001&location.address=philadelphia&location.within=10km&expand=venue&token=DNHTAISTPZBP2YMQRXIP";
+        eventsQuery1 = "https://www.eventbriteapi.com/v3/events/search//?subcategories=3003&location.address=" + location + "&location.within=5km&expand=venue&token=DNHTAISTPZBP2YMQRXIP";
+        eventsQuery2 = "https://www.eventbriteapi.com/v3/events/search//?subcategories=7004&location.address=" + location + "&location.within=10km&expand=venue&token=DNHTAISTPZBP2YMQRXIP";
+        eventsQuery3 = "https://www.eventbriteapi.com/v3/events/search//?subcategories=4001&location.address=" + location + "&location.within=10km&expand=venue&token=DNHTAISTPZBP2YMQRXIP";
     }
 
 
@@ -41,7 +53,7 @@ $(document).ready(function () {
         method: "GET"
     }).then(function (response) {
 
-        $("#events-div-1").empty();
+        $("#events-div").empty();
 
         for (i = 0; i < 3; i++) {
             var cardWidth = $("<div>");
@@ -107,8 +119,6 @@ $(document).ready(function () {
         method: "GET"
     }).then(function (response) {
 
-        $("#events-div-2").empty();
-
         for (i = 0; i < 3; i++) {
             var cardWidth = $("<div>");
             cardWidth.addClass("col s12 m4");
@@ -172,8 +182,6 @@ $(document).ready(function () {
         method: "GET"
     }).then(function (response) {
 
-        $("#events-div-3").empty();
-
         for (i = 0; i < 3; i++) {
             var cardWidth = $("<div>");
             cardWidth.addClass("col s12 m4");
@@ -235,3 +243,4 @@ $(document).ready(function () {
 });
 
 
+});
