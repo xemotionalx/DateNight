@@ -1,10 +1,13 @@
-$(document).ready(function () {
+$(document).ready(function() {
 
     //Initialize Materialize search form - location
     $('select').formSelect();
 
+    //Get User Profile from Local Storage
+
     //Determine query url based on user profile
-    var user = "quirky"
+    var user = localStorage.getItem("coupleType");
+    console.log(user);
     var eventsQuery1 = "";
     var eventsQuery2 = "";
     var eventsQuery3 = "";
@@ -21,7 +24,7 @@ $(document).ready(function () {
         eventsQuery1 = "https://www.eventbriteapi.com/v3/events/search//?subcategories=3006&location.address=philadelphia&location.within=5km&expand=venue&token=DNHTAISTPZBP2YMQRXIP";
         eventsQuery2 = "https://www.eventbriteapi.com/v3/events/search//?subcategories=5010&location.address=philadelphia&location.within=5km&expand=venue&token=DNHTAISTPZBP2YMQRXIP";
         eventsQuery3 = "https://www.eventbriteapi.com/v3/events/search//?subcategories=3008&location.address=philadelphia&location.within=5km&expand=venue&token=DNHTAISTPZBP2YMQRXIP";
-    }  else if (user === "quirky") {
+    } else if (user === "quirky") {
         eventsQuery1 = "https://www.eventbriteapi.com/v3/events/search//?subcategories=3009&location.address=philadelphia&location.within=5km&expand=venue&token=DNHTAISTPZBP2YMQRXIP";
         eventsQuery2 = "https://www.eventbriteapi.com/v3/events/search//?categories=105&location.address=philadelphia&location.within=5km&expand=venue&token=DNHTAISTPZBP2YMQRXIP";
         eventsQuery3 = "https://www.eventbriteapi.com/v3/events/search//?categories=104&location.address=philadelphia&location.within=5km&expand=venue&token=DNHTAISTPZBP2YMQRXIP";
@@ -39,7 +42,7 @@ $(document).ready(function () {
     $.ajax({
         url: eventsQuery1,
         method: "GET"
-    }).then(function (response) {
+    }).then(function(response) {
 
         $("#events-div-1").empty();
 
@@ -105,7 +108,7 @@ $(document).ready(function () {
     $.ajax({
         url: eventsQuery2,
         method: "GET"
-    }).then(function (response) {
+    }).then(function(response) {
 
         $("#events-div-2").empty();
 
@@ -170,7 +173,7 @@ $(document).ready(function () {
     $.ajax({
         url: eventsQuery3,
         method: "GET"
-    }).then(function (response) {
+    }).then(function(response) {
 
         $("#events-div-3").empty();
 
@@ -233,5 +236,3 @@ $(document).ready(function () {
     });
 
 });
-
-
