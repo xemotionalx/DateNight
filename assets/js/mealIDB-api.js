@@ -1,6 +1,3 @@
-// Initial Values
-// TBA
-
 var user = localStorage.getItem("coupleType");
 var recipeQuery1;
 var recipeQuery2;
@@ -20,6 +17,9 @@ if (user === "athletic") {
 } else if (user === "homebody") {
     var recipeQuery1 = "https://www.themealdb.com/api/json/v1/1/filter.php?c=Breakfast";
     var recipeQuery2 = "https://www.themealdb.com/api/json/v1/1/filter.php?i=chicken_breast";
+} else if (user === null) {
+    var recipeQuery1 = "https://www.themealdb.com/api/json/v1/1/search.php?s=French";
+    var recipeQuery2 = "https://www.themealdb.com/api/json/v1/1/search.php?s=Lentils";
 }
 
 
