@@ -34,6 +34,8 @@ $.ajax({
 
     for (var i = 0; i < 3; i++) {
 
+        console.log(response);
+
         // new  horizontal card
         var newCard = $("<div>");
         newCard.addClass("card horizontal");
@@ -58,7 +60,7 @@ $.ajax({
         //link
         var cardLinkDiv = $("<div>");
         cardLinkDiv.addClass("card-action");
-        cardLinkDiv.html("<a href= '" + response.meals[i].strSource + "' target='_blank'>" + "View Recipe" + "</a>")
+        cardLinkDiv.html("<a href= 'https://www.themealdb.com/browse.php?s=" + response.meals[i].idMeal + "' target='_blank'>" + "View Recipe" + "</a>")
 
         // Puts everything on Page!
         $("#recipes-div-1").append(newCard);
@@ -103,7 +105,7 @@ $.ajax({
             //link
             var cardLinkDiv = $("<div>");
             cardLinkDiv.addClass("card-action");
-            cardLinkDiv.html("<a href= '" + response.meals[i].strSource + "' target='_blank'>" + "View Recipe" + "</a>")
+            cardLinkDiv.html("<a href= 'https://www.themealdb.com/browse.php?s=" + response.meals[i].idMeal + "' target='_blank'>" + "View Recipe" + "</a>")
 
             // Puts everything on Page!
             $("#recipes-div-2").append(newCard);
