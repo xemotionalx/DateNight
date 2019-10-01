@@ -16,6 +16,9 @@ if (user === "athletic") {
 } else if (user === "homebody") {
     restaurantQuery = "https://developers.zomato.com/api/v2.1/search?entity_id=287&entity_type=city&q=delivery&count=6";
     eventsQuery = "https://www.eventbriteapi.com/v3/events/search//?subcategories=3003&location.address=philadelphia&location.within=5km&expand=venue&token=DNHTAISTPZBP2YMQRXIP";
+} else if (user === null) {
+    restaurantQuery = "https://developers.zomato.com/api/v2.1/search?entity_id=287&entity_type=city&q=wine&count=6";
+    eventsQuery = "https://www.eventbriteapi.com/v3/events/search//?subcategories=10002&location.address=philadelphia&location.within=5km&expand=venue&token=DNHTAISTPZBP2YMQRXIP";
 }
 
 $.ajax({
