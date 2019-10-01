@@ -84,26 +84,28 @@ signupForm.addEventListener('submit', (event) => {
 
 // Log in
 
-// const logInForm = document.querySelector("#login-form");
-// logInForm.addEventListener('submit', (event) => {
-  // event.preventDefault();
+ const logInForm = document.querySelector("#login-form");
+ logInForm.addEventListener('submit', (event) => {
+   event.preventDefault();
 
   // get user info
-  // const email = logInForm['login-email'].value;
-  // const password = logInForm['login-password'].value;
+  const email = logInForm['login-email'].value;
+  const password = logInForm['login-password'].value;
 
-  // auth.signInWithEmailAndPassword(email, password).then(cred => {
+  auth.signInWithEmailAndPassword(email, password).then(cred => {
     // Test
-    // console.log(cred.user);
+    console.log(email);
+    console.log(password);
+     console.log(cred.user);
     // close the login modal/reset
     // const modal = document.querySelector('#modal-login','.popup__content' );
     // M.Modal.getInstance(modal).close();
-    // logInForm.reset();
+     logInForm.reset();
 
-  // });
+   });
 
 
-// });
+ });
 
 // Store Data
 
