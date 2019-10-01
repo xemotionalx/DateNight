@@ -61,32 +61,32 @@ signupForm.addEventListener('submit', (event) => {
 
 
     });
-    // const modal = document.querySelector('#modal-signup');
-    // MSAssertion.Modal.getInstance(modal).close();
+     const modal = document.querySelector('#modal-signup');
+    //  MSAssertion.Modal.getInstance(modal).close();
     signupForm.reset();
   });
 
 });
 // logout
 
-const logout = document.querySelector("#logout")
-logout.addEventListener('click', (event) => {
+// const logout = document.querySelector("#logout")
+// logout.addEventListener('click', (event) => {
 
-  event.preventDefault();
+  // event.preventDefault();
 
-  auth.signOut().then(() => {
+  // auth.signOut().then(() => {
 
-    console.log("user signed out");
+    // console.log("user signed out");
 
-  })
+  // })
 
-})
+// })
 
 // Log in
 
-const logInForm = document.querySelector("#login-form");
-logInForm.addEventListener('submit', (event) => {
-  event.preventDefault();
+ const logInForm = document.querySelector("#login-form");
+ logInForm.addEventListener('submit', (event) => {
+   event.preventDefault();
 
   // get user info
   const email = logInForm['login-email'].value;
@@ -94,53 +94,55 @@ logInForm.addEventListener('submit', (event) => {
 
   auth.signInWithEmailAndPassword(email, password).then(cred => {
     // Test
-    console.log(cred.user);
+    console.log(email);
+    console.log(password);
+     console.log(cred.user);
     // close the login modal/reset
-    const modal = document.querySelector('#modal-login');
-    M.Modal.getInstance(modal).close();
-    logInForm.reset();
+    // const modal = document.querySelector('#modal-login','.popup__content' );
+    // M.Modal.getInstance(modal).close();
+     logInForm.reset();
 
-  });
+   });
 
 
-});
+ });
 
 // Store Data
 
 // const docRef = db.collection("samples").doc("homebody");           
-const outputHeader = document.querySelector('#sample');
-const inputText = document.querySelector('#newData');
-const saveButton = document.querySelector("#saveButton");
+// const outputHeader = document.querySelector('#sample');
+// const inputText = document.querySelector('#newData');
+// const saveButton = document.querySelector("#saveButton");
 //  Test
 
-console.log("This is outputHeader:", outputHeader);
-console.log("This is inputText:", inputText);
-console.log("This is the saveButton", saveButton);
+// console.log("This is outputHeader:", outputHeader);
+// console.log("This is inputText:", inputText);
+// console.log("This is the saveButton", saveButton);
 
-saveButton.addEventListener("click", function () {
+// saveButton.addEventListener("click", function () {
 
-  const texttoSave = inputText.value;
+  // const texttoSave = inputText.value;
   //  Test
-  console.log("I am going to save" + inputText + "to firebase");
-  docRef.set({
+  // console.log("I am going to save" + inputText + "to firebase");
+  // docRef.set({
 
-    outputHeader: inputText.value
-  }).then(function (error) {
-
-
+    // outputHeader: inputText.value
+  // }).then(function (error) {
 
 
 
-  });
-});
+
+
+  // });
+// });
   // Saving data
-  const preObject = document.getElementById('#object');
+  // const preObject = document.getElementById('#object');
 
   // Sinchorizing data 
-  const dbRefObject = firebase.database().ref().child('object');
+  // const dbRefObject = firebase.database().ref().child('object');
 
   // Sync object changes
-  dbRefObject.on('value', snap => console.log(snap.val()));
+  // dbRefObject.on('value', snap => console.log(snap.val()));
 
 
 
