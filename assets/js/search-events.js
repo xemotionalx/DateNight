@@ -6,7 +6,6 @@ $(document).ready(function() {
     var eventsQuery2 = "";
     var eventsQuery3 = "";
 
-
     $("#search-btn").on("click", function() {
 
         event.preventDefault();
@@ -53,9 +52,10 @@ $(document).ready(function() {
             method: "GET"
         }).then(function(response) {
 
-            $("#events-div").empty();
+            $("#events-div-1").empty();
 
-            for (i = 0; i < 3; i++) {
+            for (i = 0; i < 6; i++) {
+                console.log(response);
                 var cardWidth = $("<div>");
                 cardWidth.addClass("col s12 m4");
 
@@ -119,7 +119,9 @@ $(document).ready(function() {
             method: "GET"
         }).then(function(response) {
 
-            for (i = 0; i < 3; i++) {
+            $("#events-div-2").empty();
+
+            for (i = 0; i < 6; i++) {
                 var cardWidth = $("<div>");
                 cardWidth.addClass("col s12 m4");
 
@@ -169,7 +171,6 @@ $(document).ready(function() {
                 cardContent.append(cardTitle);
                 cardTitle.append(cardIcon);
                 cardContent.append(cardLink);
-
                 card.append(cardReveal);
                 cardReveal.append(cardRevealTitle);
                 cardRevealTitle.append(closeIcon);
@@ -182,7 +183,9 @@ $(document).ready(function() {
             method: "GET"
         }).then(function(response) {
 
-            for (i = 0; i < 3; i++) {
+            $("#events-div-3").empty();
+
+            for (i = 0; i < 6; i++) {
                 var cardWidth = $("<div>");
                 cardWidth.addClass("col s12 m4");
 
