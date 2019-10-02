@@ -6,7 +6,6 @@ $(document).ready(function() {
     var eventsQuery2 = "";
     var eventsQuery3 = "";
 
-
     $("#search-btn").on("click", function() {
 
         event.preventDefault();
@@ -172,7 +171,6 @@ $(document).ready(function() {
                 cardContent.append(cardTitle);
                 cardTitle.append(cardIcon);
                 cardContent.append(cardLink);
-
                 card.append(cardReveal);
                 cardReveal.append(cardRevealTitle);
                 cardRevealTitle.append(closeIcon);
