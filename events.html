@@ -22,6 +22,11 @@
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" />
+
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/header.css">
@@ -46,7 +51,7 @@
             <a href="media.html">Media</a>
             <a href="dining.html">Dining</a>
             <a href="profile.html">Your Profile</a>
-            
+
         </div>
     </div>
 
@@ -73,11 +78,11 @@
                     <div class="searchbar-location">
                         <form id="search-form">
                             <select class="browser-default" id="location-input">
-                            <option value="" disabled selected>Your Location</option>
-                            <option value="philadelphia">Philadelphia</option>
-                            <option value="newyork">New York</option>
-                            <option value="losangeles">LA</option>
-                        </select>
+                                <option value="" disabled selected>Your Location</option>
+                                <option value="philadelphia">Philadelphia</option>
+                                <option value="newyork">New York</option>
+                                <option value="losangeles">LA</option>
+                            </select>
                         </form>
                     </div>
                 </div>
@@ -85,19 +90,20 @@
                 <div class="col m2 s12">
                     <div class="searchbar-event">
                         <select class="browser-default" id="event-input">
-                                <option value="" disabled selected>Your Couple Type</option>
-                                <option value="quirky">Quirky</option>
-                                <option value="homebody">Homebody</option>
-                                <option value="athletic">Athletic</option>
-                                <option value="foodie">Foodie</option>
-                                <option value="party">Party</option>
-                            </select>
+                            <option value="" disabled selected>Your Couple Type</option>
+                            <option value="quirky">Quirky</option>
+                            <option value="homebody">Homebody</option>
+                            <option value="athletic">Athletic</option>
+                            <option value="foodie">Foodie</option>
+                            <option value="party">Party</option>
+                        </select>
                     </div>
                 </div>
 
                 <div class="col m2 s12">
 
-                    <a class="waves-effect waves-light btn #b39ddb deep-purple lighten-3" id="search-btn"><i class="material-icons left">search</i>Search</a>
+                    <a class="waves-effect waves-light btn #b39ddb deep-purple lighten-3" id="search-btn"><i
+                            class="material-icons left">search</i>Search</a>
 
                 </div>
 
@@ -111,17 +117,79 @@
             <h3 class="heading-secondary center-align">Your Adventure Is Waiting <i class="fas fa-kiss-wink-heart gradient-text"></i></h2>
         </div>
 
+        <!-- FIRST ROW WITH SLICK SCROLLER -->
 
-        <div class="row" id="events-div-1"></div>
-        <div class="row" id="events-div-2"></div>
-        <div class="row" id="events-div-3"></div>
+        <div class="row" id="events-div-1">
+
+            <div class="responsive-slick">
+                <div id="1-1" class="col s12 m4">
+
+                </div>
+                <div id="1-2" class="col s12 m4">
+
+                </div>
+                <div id="1-3" class="col s12 m4">
+
+                </div>
+                <div id="1-4" class="col s12 m4">
+
+                </div>
+                <div id="1-5" class="col s12 m4">
+
+                </div>
+                <div id="1-6" class="col s12 m4">
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- SECOND ROW WITH SLICK SCROLLER -->
+        <div class="row" id="events-div-2">
+            <div class="responsive-slick">
+                <div id="2-1" class="col s12 m4">
+
+                </div>
+                <div id="2-2" class="col s12 m4">
+
+                </div>
+                <div id="2-3" class="col s12 m4">
+
+                </div>
+                <div id="2-4" class="col s12 m4">
+
+                </div>
+                <div id="2-5" class="col s12 m4">
+
+                </div>
+                <div id="2-6" class="col s12 m4">
+                </div>
+            </div>
+        </div>
+
+        <!-- THIRD ROW WITH SLICK SCROLLER -->
+        <div class="row" id="events-div-3">
+            <div class="responsive-slick">
+                <div id="3-1" class="col s12 m4">
+
+                </div>
+                <div id="3-2" class="col s12 m4">
+
+                </div>
+                <div id="3-3" class="col s12 m4">
+
+                </div>
+                <div id="3-4" class="col s12 m4">
+
+                </div>
+                <div id="3-5" class="col s12 m4">
+
+                </div>
+                <div id="3-6" class="col s12 m4">
+                </div>
+            </div>
+        </div>
     </div>
-
-
-
-
-
-
 
     <footer class="footer">
         <div class="footer__logobox">
@@ -158,6 +226,10 @@
 
     <!-- Javascript for Searchbar-->
     <script src="assets/js/search-events.js"></script>
+
+    <!-- Slick JS -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script type="text/javascript" src="assets/js/slick.js"></script>
 </body>
 
 </html>

@@ -1,8 +1,14 @@
-// Initial Values
-// TBA
+var user = "";
+var restaurantQuery = "";
 
-var user = localStorage.getItem("coupleType");;
-var restaurantQuery;
+if (localStorage.getItem("coupleType") === null) {
+    user = "default"
+} else {
+    var user = localStorage.getItem("coupleType");
+}
+
+console.log(user);
+
 
 if (user === "athletic") {
     restaurantQuery = "https://developers.zomato.com/api/v2.1/search?entity_id=287&entity_type=city&q=healthy&count=6";
@@ -14,6 +20,8 @@ if (user === "athletic") {
     restaurantQuery = "https://developers.zomato.com/api/v2.1/search?entity_id=287&entity_type=city&q=vegan&count=6";
 } else if (user === "homebody") {
     restaurantQuery = "https://developers.zomato.com/api/v2.1/search?entity_id=287&entity_type=city&q=delivery&count=6";
+} else if (user === "default") {
+    restaurantQuery = "https://developers.zomato.com/api/v2.1/search?entity_id=287&entity_type=city&q=dinner&count=6";
 }
 
 //ba1e1bdc5ea795af460a2abe393173a4

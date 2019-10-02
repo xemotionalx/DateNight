@@ -1,6 +1,3 @@
-// Initial Values
-// TBA
-
 var user = localStorage.getItem("coupleType");
 var recipeQuery1;
 var recipeQuery2;
@@ -20,6 +17,9 @@ if (user === "athletic") {
 } else if (user === "homebody") {
     var recipeQuery1 = "https://www.themealdb.com/api/json/v1/1/filter.php?c=Breakfast";
     var recipeQuery2 = "https://www.themealdb.com/api/json/v1/1/filter.php?i=chicken_breast";
+} else if (user === null) {
+    var recipeQuery1 = "https://www.themealdb.com/api/json/v1/1/search.php?s=French";
+    var recipeQuery2 = "https://www.themealdb.com/api/json/v1/1/search.php?s=Lentils";
 }
 
 
@@ -33,6 +33,8 @@ $.ajax({
     $("#recipes-div-1").empty();
 
     for (var i = 0; i < 3; i++) {
+
+        console.log(response);
 
         // new  horizontal card
         var newCard = $("<div>");
@@ -58,7 +60,7 @@ $.ajax({
         //link
         var cardLinkDiv = $("<div>");
         cardLinkDiv.addClass("card-action");
-        cardLinkDiv.html("<a href= '" + response.meals[i].strSource + "' target='_blank'>" + "View Recipe" + "</a>")
+        cardLinkDiv.html("<a href= 'https://www.themealdb.com/browse.php?s=" + response.meals[i].idMeal + "' target='_blank'>" + "View Recipe" + "</a>")
 
         // Puts everything on Page!
         $("#recipes-div-1").append(newCard);
@@ -103,7 +105,7 @@ $.ajax({
             //link
             var cardLinkDiv = $("<div>");
             cardLinkDiv.addClass("card-action");
-            cardLinkDiv.html("<a href= '" + response.meals[i].strSource + "' target='_blank'>" + "View Recipe" + "</a>")
+            cardLinkDiv.html("<a href= 'https://www.themealdb.com/browse.php?s=" + response.meals[i].idMeal + "' target='_blank'>" + "View Recipe" + "</a>")
 
             // Puts everything on Page!
             $("#recipes-div-2").append(newCard);

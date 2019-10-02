@@ -1,4 +1,113 @@
-.feature-cards {
-    height: 300px;
-    background-color: red;
+.feature-card {
+    /* functionality for animation */
+    perspective: 1500px;
+    -moz-perspective: 1500px;
+    height: 400px;
+    position: relative;
+    margin-bottom: 100px;
+}
+
+.card-side {
+    border-radius: 3px;
+    transition: all 1s ease;
+    height: 400px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 95%;
+    backface-visibility: hidden;
+}
+
+.feature-card:hover .card-front {
+    transform: rotateY(-180deg);
+}
+
+.feature-card:hover .card-back {
+    transform: rotateY(0deg);
+}
+
+
+/* CARD FRONT */
+
+.card-front-text {
+    background-color: rgb(254, 149, 91, .7);
+    border-radius: 3px;
+    color: #fff;
+    /* font-weight: bold; */
+    font-family: 'Oleo Script Swash Caps', cursive;
+    font-size: 50px;
+    letter-spacing: -1px;
+    /* text-transform: uppercase; */
+    padding: 10px;
+    width: 100%;
+    position: absolute;
+    top: 80%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.card-front-1 {
+    background-image: linear-gradient(rgb(254, 149, 91, .7), rgb(254, 206, 140, .7)), url('../images/home/card-1-front.jpg');
+    text-align: center;
+}
+
+.card-front-2 {
+    background-image: linear-gradient(rgb(254, 149, 91, .7), rgb(254, 86, 81, .7)), url('../images/home/card-2-front.jpg');
+    background-position: center;
+    text-align: center;
+}
+
+.card-front-3 {
+    background-image: linear-gradient(rgb(79, 46, 101, .7), rgb(122, 21, 126, .7)), url('../images/home/card-3-front.jpg');
+    background-position: center;
+    text-align: center;
+}
+
+
+/* CARD BACK */
+
+.card-back {
+    transform: rotateY(180deg);
+    color: #fff;
+    font-size: 20px;
+    padding: 20px;
+}
+
+.card-back-1 {
+    background-image: linear-gradient(to bottom left, #fe955b, #fece8c);
+}
+
+.card-back-2 {
+    background-image: linear-gradient(to bottom left, #fe955b, #fe5651);
+}
+
+.card-back-3 {
+    background-image: linear-gradient(to bottom left, #fe5651, #4F2E65);
+}
+
+
+/* CAROUSEL */
+
+.carousel-container {
+    position: relative;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 100px;
+}
+
+.carousel-img {
+    height: 500px;
+}
+
+.carousel-heading {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 70px;
+    /* font-family: 'Oleo Script Swash Caps', cursive; */
+    color: #fff;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, .5);
 }
