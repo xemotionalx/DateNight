@@ -49,11 +49,9 @@ $(document).ready(function() {
         method: "GET"
     }).then(function(response) {
 
-        $("#events-div-1").empty();
-
-        for (i = 0; i < 3; i++) {
-            var cardWidth = $("<div>");
-            cardWidth.addClass("col s12 m4");
+        for (i = 0; i < 6; i++) {
+            // var cardWidth = $("<div>");
+            // cardWidth.addClass("col s12 m4");
 
             var card = $("<div>");
             card.addClass("card small");
@@ -93,8 +91,20 @@ $(document).ready(function() {
             var eventInfo = $("<p>");
             eventInfo.html(response.events[i].description.html);
 
-            $("#events-div-1").append(cardWidth);
-            cardWidth.append(card);
+            if (i === 0) {
+                $("#1-1").append(card);
+            } else if (i === 1) {
+                $("#1-2").append(card);
+            } else if (i === 2) {
+                $("#1-3").append(card);
+            } else if (i === 3) {
+                $("#1-4").append(card);
+            } else if (i === 4) {
+                $("#1-5").append(card);
+            } else if (i === 5) {
+                $("#1-6").append(card);
+            }
+            // cardWidth.append(card);
             card.append(cardImgDiv);
             cardImgDiv.append(cardImg);
             card.append(cardContent);
@@ -115,12 +125,7 @@ $(document).ready(function() {
         method: "GET"
     }).then(function(response) {
 
-        $("#events-div-2").empty();
-
-        for (i = 0; i < 3; i++) {
-            var cardWidth = $("<div>");
-            cardWidth.addClass("col s12 m4");
-
+        for (i = 0; i < 6; i++) {
             var card = $("<div>");
             card.addClass("card small");
 
@@ -159,8 +164,20 @@ $(document).ready(function() {
             var eventInfo = $("<p>");
             eventInfo.html(response.events[i].description.html);
 
-            $("#events-div-2").append(cardWidth);
-            cardWidth.append(card);
+            if (i === 0) {
+                $("#2-1").append(card);
+            } else if (i === 1) {
+                $("#2-2").append(card);
+            } else if (i === 2) {
+                $("#2-3").append(card);
+            } else if (i === 3) {
+                $("#2-4").append(card);
+            } else if (i === 4) {
+                $("#2-5").append(card);
+            } else if (i === 5) {
+                $("#2-6").append(card);
+            }
+
             card.append(cardImgDiv);
             cardImgDiv.append(cardImg);
             card.append(cardContent);
@@ -180,9 +197,7 @@ $(document).ready(function() {
         method: "GET"
     }).then(function(response) {
 
-        $("#events-div-3").empty();
-
-        for (i = 0; i < 3; i++) {
+        for (i = 0; i < 6; i++) {
             var cardWidth = $("<div>");
             cardWidth.addClass("col s12 m4");
 
@@ -224,8 +239,20 @@ $(document).ready(function() {
             var eventInfo = $("<p>");
             eventInfo.html(response.events[i].description.html);
 
-            $("#events-div-3").append(cardWidth);
-            cardWidth.append(card);
+            if (i === 0) {
+                $("#3-1").append(card);
+            } else if (i === 1) {
+                $("#3-2").append(card);
+            } else if (i === 2) {
+                $("#3-3").append(card);
+            } else if (i === 3) {
+                $("#3-4").append(card);
+            } else if (i === 4) {
+                $("#3-5").append(card);
+            } else if (i === 5) {
+                $("#3-6").append(card);
+            }
+
             card.append(cardImgDiv);
             cardImgDiv.append(cardImg);
             card.append(cardContent);
